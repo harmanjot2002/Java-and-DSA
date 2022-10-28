@@ -123,6 +123,60 @@ public class Assignments10{
             String ab = scn.next();
             String ba = scn.next();
             System.out.println(ab+ba);
-        }           
+        }       
+        
+        //Lecture5
+        // Q1 - Write a program to add 8 to the number x and then divide it by 3. Now, the modulus of the quotient
+        // is taken with 5 and then multiply the resultant value by 5. Display the final result.
+        // Input: 2345
+        // Output: 2
+        int o = scn.nextInt();
+        System.out.print((((o + 8) / 3) % 5) * 5);
+
+        // Q2 - Swap two numbers without the use of third variable.
+        // Input: 5 10
+        // Output: 10 5
+        System.out.println("Enter 1st number");
+        int x1 = scn.nextInt();
+        System.out.println("Enter 2nd number");
+        int y1 = scn.nextInt();
+        x1 = x1 + y1;
+        y1 = x1 - y1;
+        x1 = x1 - y1;
+        System.out.println(x1);
+        System.out.println(y1);
+
+        // Q3 - Write a program to calculate the sum of the digits of a 3-digit number.
+        // Input: 132
+        // Output: 6
+        int sum = 0;
+        while(x > 0){
+            sum += x % 10;
+            x /= 10;
+        }
+        System.out.println(sum);
+
+        // Q4 - Assign values of variables 'f' and 'g' as 55 and 70 respectively and then check if:
+        // i) both the conditions 'f < 50' and 'f < g' are true.
+        // ii) at least one of the conditions 'f < 50' or 'f < g' is true.
+        int f = 55;
+        int g = 70;
+        System.out.print(f < 50 && f < g);
+
+        // Q5 - Find the total number of bits needed to be flipped to convert x to y.
+        // Input: 65 80
+        // Output: 2
+        // counting set bits
+        // The idea is to take XOR of the given two integers. After calculating the XOR, the problem will reduce to 
+        // counting set bits in the XOR output using Brian Kernighan algorithm.
+        int x2 = scn.nextInt();
+        int y2 = scn.nextInt();
+        int n1 = x2 ^ y2;
+        int count1 = 0;
+        while (n1 != 0){
+        n1 = n1 & (n1 - 1);
+        count1++;
+        }
+        System.out.print(count1);
     }
 }
