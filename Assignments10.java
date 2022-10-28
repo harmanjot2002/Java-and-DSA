@@ -101,10 +101,10 @@ public class Assignments10{
         // 38
         // 76
         int t = scn.nextInt();
-        for(int i = 1; i <= t; i++){
-            int a = scn.nextInt();
-            int b = scn.nextInt();
-            System.out.println(a+b);
+        for(int v = 1; v <= t; v++){
+            int q = scn.nextInt();
+            int w = scn.nextInt();
+            System.out.println(q+w);
         }
 
         // Q5 - Given few lines of input(number of lines unknown) where each line has two
@@ -120,9 +120,9 @@ public class Assignments10{
         // SunnyDay
         // GoodMorning
         while(scn.hasNextLine()){
-            String a = scn.next();
-            String b = scn.next();
-            System.out.println(a+b);
+            String ab = scn.next();
+            String ba = scn.next();
+            System.out.println(ab+ba);
         }           
     }
 }
