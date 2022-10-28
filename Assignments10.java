@@ -81,9 +81,12 @@ public class Assignments10{
         // Percentage marks: 87%
         System.out.println("Enter marks of three students :");
         int marks1=scn.nextInt();
-        int marks1=scn.nextInt();
-        int marks1=scn.nextInt();
-        
+        int marks2=scn.nextInt();
+        int marks3=scn.nextInt();
+        int total=marks1+marks2+marks3;
+        int percentage=(total)/3;
+        System.out.println("Total marks: "+ total);
+        System.out.println("Percentage marks: "+ percentage +"%");
 
         // Q4 - Given two numbers, return their sum in the following format:
         // Int t representing number of test cases
@@ -97,15 +100,29 @@ public class Assignments10{
         // 9
         // 38
         // 76
+        int t = scn.nextInt();
+        for(int i = 1; i <= t; i++){
+            int a = scn.nextInt();
+            int b = scn.nextInt();
+            System.out.println(a+b);
+        }
+
+        // Q5 - Given few lines of input(number of lines unknown) where each line has two
+        // strings, concatenate the strings.
         // Input :
         // Hello World
         // Happy Faces
         // Sunny Day
         // Good Morning
-        // Q5 - Given few lines of input(number of lines unknown) where each line has two
-        // strings, concatenate the strings.
-        // Cracking the Coding Interview in Java - Foundation
         // Output :
         //  LevelU
+        // HappyFaces
+        // SunnyDay
+        // GoodMorning
+        while(scn.hasNextLine()){
+            String a = scn.next();
+            String b = scn.next();
+            System.out.println(a+b);
+        }           
     }
 }
