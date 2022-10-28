@@ -1,6 +1,7 @@
+import java.util.Scanner;
+
 public class Assignments10{
     public static void main(String[] args) {
-        
         //Lecture3
 
         //Q1 - Take 2 integer values in two variables x and y and print their product. (Easy)
@@ -43,5 +44,68 @@ public class Assignments10{
         j=k;
         System.out.println("Output after swapping is : "+i+" "+k);
 
+        //Lecture4
+
+        //Q1 - Input name, roll number and field of interest from user and print in  the format below :
+        // Name: xyz, Roll number: xyz, Field of interest: xyz
+        // Input : Single line format
+        // Aman Gupta 4053 Physics
+        // Output :
+        // Name: Aman Gupta
+        // Roll Number: 4053
+        // Field of interest: Physics
+        Scanner scn = new Scanner(System.in);
+        String first_name = scn.next();
+        String last_name = scn.next();
+        int roll_number = scn.nextInt();
+        String field_of_interest = scn.next();
+        System.out.println("Name: " + first_name + " " + last_name);
+        System.out.println("Roll Number: " + roll_number);
+        System.out.println("Field of interest: " + field_of_interest);
+
+        // Q2 - Input two different string and print them in same line.
+        // Input :
+        // Level 
+        // Up
+        String str1=scn.next();
+        String str2=scn.next();
+        System.out.println(str1 + " " + str2);
+
+        // Q3 - If the marks of Robert in three subjects are entered through keyboard (each out of
+        // 100), write a program to calculate his total marks and percentage marks.
+        // Input :
+        // 78
+        // 89
+        // 95
+        // Output : Total marks: 262
+        // Percentage marks: 87%
+        System.out.println("Enter marks of three students :");
+        int marks1=scn.nextInt();
+        int marks1=scn.nextInt();
+        int marks1=scn.nextInt();
+        
+
+        // Q4 - Given two numbers, return their sum in the following format:
+        // Int t representing number of test cases
+        // T lines of Two integers representing the numbers to be added
+        // Input :
+        // 3
+        // 4 5
+        // 18 20
+        // 49 27
+        // Output :
+        // 9
+        // 38
+        // 76
+        // Input :
+        // Hello World
+        // Happy Faces
+        // Sunny Day
+        // Good Morning
+        // Q5 - Given few lines of input(number of lines unknown) where each line has two
+        // strings, concatenate the strings.
+        // Cracking the Coding Interview in Java - Foundation
+        // Output :
+        //  LevelU
     }
 }
