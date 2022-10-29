@@ -167,15 +167,14 @@ public class Assignments10{
         // Input: 65 80
         // Output: 2
         // counting set bits
-        // The idea is to take XOR of the given two integers. After calculating the XOR, the problem will reduce to 
-        // counting set bits in the XOR output using Brian Kernighan algorithm.
+        // The idea is to take XOR of the given two integers. After calculating the XOR, the problem will reduce to  counting set bits in the XOR output using Brian Kernighan algorithm.
         int x2 = scn.nextInt();
         int y2 = scn.nextInt();
         int n1 = x2 ^ y2;
         int count1 = 0;
         while (n1 != 0){
-        n1 = n1 & (n1 - 1);
-        count1++;
+            n1 = n1 & (n1 - 1);
+            count1++;
         }
         System.out.print(count1);
     }
