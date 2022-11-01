@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Assignments10{
+public class Practice{
     public static void main(String[] args) {
         //Lecture3
 
