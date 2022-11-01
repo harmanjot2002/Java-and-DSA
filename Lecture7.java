@@ -12,6 +12,8 @@ public class Lecture7{
         while(num<=n){
             System.out.println(num);
             num++;
+            if(num==5)
+                break;
         }
 
         //Using For loop
@@ -26,5 +28,14 @@ public class Lecture7{
             num3++;
         }
         while(num3<=10);
+
+        //Print sum of stream of integers in input.
+        int num4=sc.nextInt();
+        int sum=0;
+        while(num4!=-1){
+            sum+=num4;
+            num4=sc.nextInt();
+        }
+        System.out.println(sum);
     }
 }
