@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Lecture15{
 
@@ -51,5 +52,18 @@ public class Lecture15{
         for(int i=0;i<arr3.length;i++){
             System.out.println(arr3[i]);
         }
+
+
+        //Deep copy can be made using clone() or using copyOf() of Arrays package.
+        int[] arr4={3,4,5,6,7};
+        int[] arr5=Arrays.copyOf(arr,arr.length);
+        //int[] arr5=Arrays.copyOfRange(arr,1,4);
+        // int[] arr5=arr4.clone();
+        printArray(arr4);
+        printArray(arr5);
+        arr5[1]=0;
+        arr5[2]=1;
+        printArray(arr4);
+        printArray(arr5);
     }
 }
