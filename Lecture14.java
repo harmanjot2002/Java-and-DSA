@@ -4,7 +4,7 @@ class ArraysExample{
     void demoArrays(){
         int[] ages=new int[3];
         float[] weights=new float[3];
-        String[] names={"Rahul","Raj","Mohan"};
+        String[] names={"Rahul","Raj","Mohan","iou"};
         ages[0]=34;
         ages[1]=12;
         ages[2]=45;
@@ -12,6 +12,10 @@ class ArraysExample{
         System.out.println(ages[0]);
         System.out.println(ages[1]);
         System.out.println(ages[2]);
+        //Length of array
+        System.out.println(ages.length);
+        System.out.println(weights.length);
+        System.out.println(names.length);
 
         //Multi-Dimensional Arrays
         int[][] arr1=new int[5][3];
