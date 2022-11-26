@@ -40,8 +40,8 @@ class ArraysExample{
         }
 
         //Traversing over multi-dimensional arr.
-        for(int k=0;k<3;k++){
-            for(int j=0;j<3;j++){
+        for(int k=0;k<matrix.length;k++){
+            for(int j=0;j<matrix[k].length;j++){
                 System.out.println(matrix[k][j]);
             }
         }
