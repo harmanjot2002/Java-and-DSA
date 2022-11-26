@@ -46,6 +46,9 @@ class ArraysExample{
             }
         }
 
+        //Printing empty array
+        int arr5[] = new int [5];
+        System.out.print(arr5);
     } 
 }
 
