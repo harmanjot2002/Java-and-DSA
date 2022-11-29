@@ -45,6 +45,7 @@ public class Lecture19{
         for (int i = 1; i <= n; i++) {
             a[i]=sc.nextInt();
         }
+        // making a prefix sum array out of given array
         for (int i = 1; i <= n; i++) {
             a[i] += a[i - 1];
         }
@@ -54,6 +55,9 @@ public class Lecture19{
             int l, r;
             l = sc.nextInt();
             r = sc.nextInt();
+            // we need to find sum of values of indices from l to r (both included)
+            // so that is equal to (total sum till r - total sum till l-1 )
+            // note we also need to include the value at index l so subtracting only till (l-1)
             int ans = (a[r] - a[l-1]);
             System.out.println(ans);
             q--;
