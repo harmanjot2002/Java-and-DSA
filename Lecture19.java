@@ -12,7 +12,6 @@ public class Lecture19{
     //2. Given an array of integers of size n. Answer q queries where you need to print the sum of values in a given range of indices from l to r (both included).
     //Note: The values of l and r in queries follow 1-based indexing.
     
-
     //3.Check if we can partitiom the array into 2 subarrays with equal sum.More formally,check that the prefix sum of a part is equal to the suffix sum of rest of the array.
     public static boolean check(int[] a) {
         int n = a.length;
@@ -28,7 +27,6 @@ public class Lecture19{
         }
         return false;
     }
-
 
     public static void main(String[] args) {
         int[] a1={5, 4, 1, 2, 3};
