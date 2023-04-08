@@ -14,10 +14,19 @@ class keyboard{
         System.out.println("Sum is "+c);
         */
 
+        //Taking String as Input
+        /*
         String name;
         System.out.println("Enter your name ");
         // name=sc.next();
         name=sc.nextLine();
         System.out.println("Hello "+name);
+        */
+
+
+        //Binary to Decimal using useRadix()
+        sc.useRadix(2);
+        int x=sc.nextInt();
+        System.out.println(x);
     }
 }
