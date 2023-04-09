@@ -40,7 +40,7 @@ public class maskingAndSwapping {
       c=(byte)(c|12);
       
       System.out.println((c&0b11110000)>>4);
-      System.out.println((c&0b00001111)>>4);
+      System.out.println(c&0b00001111);
       
     }
 }
