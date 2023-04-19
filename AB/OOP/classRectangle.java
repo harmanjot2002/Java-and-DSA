@@ -1,13 +1,14 @@
 class Rectangle{
-    int length;
-    int breadth;
-    public int area(){
+    double length;
+    double breadth;
+    public double area(){
         return length*breadth;
     }
     boolean isSquare(){
-        if(length==breadth)
-            return true;
-        return false;
+        // if(length==breadth)
+        //     return true;
+        // return false;
+        return length==breadth;
     }
 }
 class classRectangle{
