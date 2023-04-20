@@ -25,6 +25,30 @@ class Subject{
         return"\n SubjectID: "+subID+"\n Name "+name+"\n MarksObtained "+maxMarks;
     }
 }
+class Students{
+    private String name;
+    private String roll;
+    private String dept;
+    private Subject sub[];
+    public Students(String roll,String name){
+         this.roll=roll;
+         this.name=name;
+    }
+    public String getRoll(){return roll;}
+    public String getDept(){return dept;}
+    public String getName(){return name;}
+    public Subject[] getSubjects(){return sub;}
+    public void setDept(String dept){
+        this.dept=dept;
+    }
+    public void setSubjects(Subject ...subs){
+        for(int i=0;i<subs.length;i++)
+            sub[i]=subs[i];
+    }
+    public String toString(){
+        return "Roll :" +roll+"\nName :"+name+"\nDept :"+dept;
+    }
+}
 public class ArrayOfObjects{
     public static void main(String[] args) {
         Subject s[]=new Subject[3];
