@@ -1,6 +1,6 @@
 class HondaCity{
     static long price=10;
-    int x=3;
+    int x=2;
     void display(){
         System.out.println(price);
     }
@@ -21,13 +21,14 @@ public class StaticMembers{
     public static void main(String[] args) {
         HondaCity h1=new HondaCity();
         HondaCity h2=new HondaCity();
-        System.out.println(h1.price);
-        System.out.println(h2.price);
+        System.out.println(h1.OnRoadPrice("Delhi"));
+        System.out.println(h1.price+" "+h1.x);
+        System.out.println(h2.price+" "+h2.x);
         System.out.println(HondaCity.price);
         HondaCity.price=20;
-        System.out.println(h1.price);
-        System.out.println(h2.price);
+        h1.x=30;
+        System.out.println(h1.price+" "+h1.x);
+        System.out.println(h2.price+" "+h2.x);
         System.out.println(HondaCity.price);
-        System.out.println(h1.OnRoadPrice("Delhi"));
     }
 }
