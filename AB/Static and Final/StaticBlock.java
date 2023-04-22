@@ -6,7 +6,7 @@ class Test{
         System.out.println("Block 2");
     }
 }
-
+ 
 public class StaticBlock{    
     /*static{
         System.out.println("Block 1");
