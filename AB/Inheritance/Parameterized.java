@@ -11,11 +11,16 @@ class ChildParem extends ParentParem{
         System.out.println("Non-Param of Child");
     }
     public ChildParem(int x){
+        // super(x);
         System.out.println("Param of Child "+x);
+    }
+    public ChildParem(int x,int y){
+        super(x);
+        System.out.println("Param of Child "+y);
     }
 }
 public class Parameterized{
     public static void main(String[] args) {
-        ChildParem cp=new ChildParem(2);
+        ChildParem cp=new ChildParem(3,5);
     }
 }
