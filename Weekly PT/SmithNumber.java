@@ -15,7 +15,7 @@ class SmithNumber{
             n/=10;
         }
         return sum;
-    }
+    } 
     static int SumOfPrime(int n){
         int i=2;
         int sum=0;
