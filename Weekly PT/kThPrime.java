@@ -1,12 +1,8 @@
 import java.util.*;
 /*
  15
-2
-5
-
-15
-3
--1
+ 2
+ 5
  */
 class kThPrime{
     public static void main(String[] args) {
