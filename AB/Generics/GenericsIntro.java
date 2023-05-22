@@ -1,3 +1,5 @@
+@SuppressWarnings("unchecked")
+
 class GenericsIntro<T>{
     T data[]=(T[]) new Object[3];
 
