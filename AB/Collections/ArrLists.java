@@ -28,5 +28,14 @@ class ArrLists{
         System.out.println();
         al.set(2,100);
         System.out.println(al);  //[2, 3, 100, 4, 70]
+
+        for (Integer i : al)
+            System.out.print(i + " ");
+
+        System.out.println("Before sorting list:");
+        System.out.println(al);
+        Collections.sort(al);
+        System.out.println("after sorting list:");
+        System.out.println(al);
     }
 }
