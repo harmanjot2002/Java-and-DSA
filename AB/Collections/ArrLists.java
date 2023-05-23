@@ -23,7 +23,7 @@ class ArrLists{
         System.out.println();
         Iterator itr=al.iterator();
         while(itr.hasNext())
-            System.out.print(itr.next());  //32470
+            System.out.print(itr.next()); //232470
 
         System.out.println();
         al.set(2,100);
