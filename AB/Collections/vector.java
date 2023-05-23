@@ -44,6 +44,6 @@ class vector{
         System.out.println(v); //[21, 3, 2, 4, 70]
         Collections.sort(v);
         System.out.println("after sorting list:");
-        System.out.println(v); //[2, 3, 4, 21, 70]
+        System.out.println(v); //[2, 3, 4, 21, 70] 
     }
 }
