@@ -30,8 +30,10 @@ class ArrLists{
         System.out.println(al);  //[2, 3, 100, 4, 70]
 
         for (Integer i : al)
-            System.out.print(i + " ");
+            System.out.print(i + " "); //2 3 100 4 70 
 
+        System.out.println();
+        System.out.println(al.get(3)); //4
         System.out.println("Before sorting list:");
         System.out.println(al);
         Collections.sort(al);
