@@ -59,5 +59,35 @@ class ArrLists{
         System.out.println("Copy List to List2,\nAfter copy:");
         System.out.println("List1: " + List1); //List1: [A, B, C, D]
         System.out.println("List2: " + List2); //List2: [A, B, C, D]
+
+
+        ArrayList<String> c1= new ArrayList<String>();
+        c1.add("Red");
+        c1.add("Green");
+        c1.add("Black");
+        c1.add("White");
+        c1.add("Pink");
+        ArrayList<String> c2= new ArrayList<String>();
+        c2.add("Red");
+        c2.add("Green");
+        c2.add("Black");
+        c2.add("Pink");
+        ArrayList<String> c3=new ArrayList<>();
+        for(String str:c1){
+            if(c2.contains(str))
+                c3.add(str);
+        }
+        System.out.println(c3); //[Red, Green, Black, Pink]
+
+
+        //trimming the capacity of an array list.
+        System.out.println(c3.size()); //4
+        c3.trimToSize();
+        System.out.println(c3.size()); //4
+
+
+        //Increase arraylist capacity
+        c3.ensureCapacity(6);
+        System.out.println(c3.size()); //4
     }
 }
