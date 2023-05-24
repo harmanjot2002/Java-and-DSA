@@ -33,7 +33,7 @@ class stack{
             System.out.println(itr.next()); 
             /*
             Welcome
-            To
+            To 
             Geeks */ 
         }  
 
