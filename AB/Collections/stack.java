@@ -28,7 +28,7 @@ class stack{
         System.out.println();
 
 
-        Iterator<String> itr=stack.iterator();  
+        Iterator itr=stack.iterator();  
         while(itr.hasNext()){  
             System.out.println(itr.next()); 
             /*
@@ -44,6 +44,7 @@ class stack{
         System.out.println();
 
         System.out.print(stack+" "); //[Welcome, To, Geeks]
+        System.out.println();
         while(!stack.isEmpty()) {
             System.out.println(stack.pop());
         }
