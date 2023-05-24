@@ -24,9 +24,9 @@ class LinkdLists{
             System.out.print(ll.get(i) + " ");  //2 3 3 70 4
 
         System.out.println();
-        Iterator itr=ll.iterator();
+        Iterator itr=ll.listIterator(2);
         while(itr.hasNext())
-            System.out.print(itr.next()); //233704
+            System.out.print(itr.next()); //3704
 
         System.out.println();
         ll.set(2,100);
