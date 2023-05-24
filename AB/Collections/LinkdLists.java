@@ -48,5 +48,10 @@ class LinkdLists{
         System.out.print("After converted LinkedList to Array: ");
         for(Object o : a)
         System.out.print(o+" ");  //After converted LinkedList to Array: 2 3 4 70 100
+
+        System.out.println();
+        System.out.println(ll); //[2, 3, 4, 70, 100]
+        ll.pop();
+        System.out.println(ll); //[3, 4, 70, 100]
     }
 }
