@@ -34,6 +34,7 @@ class PriorityQueues{
         System.out.println("Size of queue: " + pq.size());  //3
 
         pq.clear();
+        System.out.println(pq); //[]
         System.out.println("Size of queue: " + pq.size());  //0
 
         System.out.println("Is the queue empty? " + pq.isEmpty());  //true
