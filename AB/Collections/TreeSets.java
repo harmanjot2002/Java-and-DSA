@@ -35,5 +35,16 @@ class TreeSets{
         }
         System.out.println();
 
+        Iterator it = ts.descendingIterator();
+        System.out.println("Elements in Reverse Order:");
+        while (it.hasNext()) {
+            System.out.println(it.next());
+            /*
+            Elements in Reverse Order:
+            Geek
+            For
+            C
+             */
+        }
     }
 }
