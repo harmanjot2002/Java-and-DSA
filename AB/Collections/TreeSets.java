@@ -67,7 +67,14 @@ class TreeSets{
         System.out.println("Strictly greater than 89 : "+tree_num.higher(89)); //null
         System.out.println("Strictly less than 69 : "+tree_num.lower(69)); //36
         System.out.println("Strictly less than 12 : "+tree_num.lower(12)); //10
-        
 
+
+
+        //Write a Java program to find numbers less than 25 in a tree set.
+        TreeSet<Integer> nts=new TreeSet<>(tree_num.headSet(25));
+        Iterator itrs=nts.iterator();
+        while(itrs.hasNext()){
+            System.out.print(itrs.next()+" "); //10 14 16 22 
+        }
     }
 }
