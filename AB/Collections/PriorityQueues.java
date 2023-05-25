@@ -38,5 +38,18 @@ class PriorityQueues{
         System.out.println("Size of queue: " + pq.size());  //0
 
         System.out.println("Is the queue empty? " + pq.isEmpty());  //true
+
+
+
+        //Convert Priority Queue to a string representation
+        PriorityQueue<String> pq1 = new PriorityQueue<String>();  
+        pq1.add("Red");
+        pq1.add("Green");
+        pq1.add("Black");
+        pq1.add("White");
+        System.out.println("Original Priority Queue: "+pq1);
+        String str1;
+        str1 = pq1.toString();
+        System.out.println("String representation of the Priority Queue: "+str1);  
     }
 }
