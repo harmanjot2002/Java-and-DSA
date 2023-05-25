@@ -46,5 +46,28 @@ class TreeSets{
             C
              */
         }
+
+
+
+        TreeSet <Integer>tree_num = new TreeSet<Integer>();
+        tree_num.add(10);
+        tree_num.add(22);
+        tree_num.add(36);
+        tree_num.add(25);
+        tree_num.add(16);
+        tree_num.add(70);
+        tree_num.add(86);
+        tree_num.add(89);
+        tree_num.add(14);
+        System.out.println("Greater than or equal to 86 : "+tree_num.ceiling(86)); //89
+        System.out.println("Greater than or equal to 29 : "+tree_num.ceiling(29)); //36
+        System.out.println("Less than or equal to 86 : "+tree_num.floor(86)); //82
+        System.out.println("Less than or equal to 29 : "+tree_num.floor(29)); //25
+        System.out.println("Strictly greater than 86 : "+tree_num.higher(86)); //89
+        System.out.println("Strictly greater than 89 : "+tree_num.higher(89)); //null
+        System.out.println("Strictly less than 69 : "+tree_num.lower(69)); //36
+        System.out.println("Strictly less than 12 : "+tree_num.lower(12)); //10
+        
+
     }
 }
