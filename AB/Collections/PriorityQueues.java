@@ -47,6 +47,8 @@ class PriorityQueues{
         pq1.add("Green");
         pq1.add("Black");
         pq1.add("White");
+        pq1.add("Red");
+        System.out.println(Collections.frequency(pq1,"Red"));
         System.out.println("Original Priority Queue: "+pq1);
         String str1;
         str1 = pq1.toString();
