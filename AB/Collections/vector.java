@@ -45,5 +45,14 @@ class vector{
         Collections.sort(v);
         System.out.println("after sorting list:");
         System.out.println(v); //[2, 3, 4, 21, 70] 
+
+
+        Integer arr[]=new Integer[v.size()];
+        v.copyInto(arr);
+        for(Integer i:arr)
+            System.out.print(i+" "); //2 3 4 21 70
+
+        
+        System.out.println("\n"+v.hashCode());
     }
 }
