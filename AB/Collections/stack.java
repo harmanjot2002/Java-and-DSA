@@ -14,6 +14,8 @@ class stack{
         stack1.push("All");
         stack1.push("Geeks");
 
+        System.out.println(stack.search("To")); //4
+
         System.out.print(stack+" "); //[Welcome, To, Geeks, For, Geeks]
         System.out.println();
         System.out.print(stack1+" "); //[4, All, Geeks]
