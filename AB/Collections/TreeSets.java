@@ -76,5 +76,12 @@ class TreeSets{
         while(itrs.hasNext()){
             System.out.print(itrs.next()+" "); //10 14 16 22 
         }
+
+        System.out.println();
+        TreeSet<Integer> nnts=new TreeSet<>(tree_num.tailSet(25));
+        Iterator itrss=nnts.iterator();
+        while(itrss.hasNext()){
+            System.out.print(itrss.next()+" "); //25 36 70 86 89
+        }
     }
 }
