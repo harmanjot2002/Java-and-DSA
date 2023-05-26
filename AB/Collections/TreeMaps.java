@@ -23,18 +23,22 @@ class TreeMaps{
         System.out.println(treeMap.containsValue(3)); //true
 
         System.out.println(treeMap.entrySet()); //[A=1, C=3]
+        System.out.println(treeMap.keySet()); //[A, C]
+        System.out.println(treeMap.descendingKeySet()); //[C,A]
         
         System.out.println(treeMap.firstEntry()); //A=1
-        
         System.out.println(treeMap.firstKey()); //A
+        System.out.println(treeMap.lastKey()); //C   
 
         System.out.println(treeMap.headMap("B")); //{A=1}
-
         System.out.println(treeMap.tailMap("B")); //{C=3}
 
-        System.out.println(treeMap.keySet()); //[A, C]
-
-        System.out.println(treeMap.lastKey()); //C        
+        System.out.println(treeMap.floorEntry("A")); //A=1
+        System.out.println(treeMap.floorEntry("C")); //C=3
+        System.out.println(treeMap.floorKey("A")); //A
+        System.out.println(treeMap.higherEntry("A")); //C=3
+        System.out.println(treeMap.lowerEntry("A")); //null
+        
 
         System.out.println(treeMap.size()); //2
 
