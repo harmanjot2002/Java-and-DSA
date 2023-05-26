@@ -1,5 +1,8 @@
 import java.util.*;
 /*
+ Write a Java program that takes a string as input and counts the frequency of each word in the string. Return a collection (Map) where the keys are the unique words in the string, and the values are the corresponding frequencies. Implement this program using collections in Java.
+ */
+/*
 I am a girl and I am studying
 {I=2, a=1, am=2, and=1, girl=1, studying=1}
  */
