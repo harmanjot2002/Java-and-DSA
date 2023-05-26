@@ -1,5 +1,8 @@
 import java.util.*;
 /*
+ Write a Java program that takes an array of integers as input and returns a collection (Set) containing only the unique elements from the input array. Implement this program using collections in Java.
+ */
+/*
 6
 4 7 3 4 0 2
 [0, 2, 3, 4, 7]
