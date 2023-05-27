@@ -9,18 +9,18 @@ class CstudentGradeBook{
         tm.put("Harman",40);
         tm.put("Navreet",90);
         tm.put("Gurvansh",70);
-        System.out.println(tm);
+        System.out.println(tm); //{Gurvansh=70, Harman=40, Navreet=90}
 
         if(tm.containsKey("Navreet")){
-            System.out.println(tm.get("Navreet"));
+            System.out.println(tm.get("Navreet")); //90
         }
 
-       System.out.println(tm.values());
+       System.out.println(tm.values()); //[70, 40, 90]
        int sum=0;
        for(Integer i:tm.values()){
             sum+=i;
        }
-       System.out.println(sum);
-       System.out.println(sum/3);
+       System.out.println(sum); //200
+       System.out.println(sum/3); //66
     }
 }
