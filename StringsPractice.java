@@ -77,7 +77,7 @@ public class StringsPractice {
         int cnt=0;
         for(int i=0;i<str.length();i++){
             for(int j=i+1;j<=str.length();j++){
-                if(isPalindrome(str.substring(i,j))==true){
+                if(isPalindrome(str.substring(i,j))){
                     System.out.print(str.substring(i,j)+" ");
                     cnt++;
                 }
@@ -87,7 +87,7 @@ public class StringsPractice {
         */
 
         //Reverse each word in string
-        /*
+        //I ma na rotacude
         String str="I am an educator";
         String ans="";
         StringBuilder sb=new StringBuilder("");
@@ -106,9 +106,10 @@ public class StringsPractice {
         sb.reverse();
         ans+=sb;
         System.out.println(ans);
-        */
+        
 
         //Compress string
+        /*
         String str="aaabbbbcdddee";
         String ans=""+str.charAt(0);
         int cnt=1;
@@ -128,5 +129,6 @@ public class StringsPractice {
         if(cnt>1)
             ans+=cnt;
         System.out.println(ans);
+        */
     }
 }
