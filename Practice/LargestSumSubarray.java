@@ -28,7 +28,7 @@ public class LargestSumSubarray {
             arr[i]= sc.nextInt();
         }
         System.out.println (max_sum( arr));
-    }
+    } 
      public static int max_sum(int[] arr) {
         int ans = Integer.MIN_VALUE;
         int sum = 0;

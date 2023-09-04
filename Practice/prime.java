@@ -1,5 +1,5 @@
 import java.util.*;
-
+ //user6949jw
 class prime{
     static boolean prime(int n){
         int cnt=0;
