@@ -89,7 +89,7 @@ public class four {
     }
 
 
-    //Reverse LL recusrsively
+    //Reverse LL recusrsively(O(n) Time,O(n) Space)
     public static Node reverseList(Node head) {
         if(head==null || head.next==null)
             return head;
@@ -99,7 +99,7 @@ public class four {
         return newHead;
     }
 
-    //Reverse LL Iteratively
+    //Reverse LL Iteratively(O(n) Time,O(1) Space).
     public static Node reverseIter(Node head){
         Node curr=head;
         Node prev=null;
@@ -111,6 +111,29 @@ public class four {
             curr=after;
         }
         return prev;
+    }
+
+    //Check Palindrome LL
+    public static boolean isPalindrome(Node head) {
+        // write your code here
+        Node slow=head;
+        Node fast=head;
+        while(fast.next!=null && fast.next.next!=null){ //To get left middle
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+        Node temp=reverseList(slow.next);
+        slow.next=temp;
+        Node p1=head;
+        Node p2=slow.next;
+        while(p2!=null){
+            if(p1.data!=p2.data){
+                return false;
+            }
+            p1=p1.next;
+            p2=p2.next;
+        }
+        return true;
     }
     public static void main(String[] args) {
         Node a=new Node(5);
@@ -135,5 +158,6 @@ public class four {
         // System.out.println();
         Node ans4=reverseIter(a);
         display(ans4); //9 10 9 8 7 5 
+        System.out.println(isPalindrome(ans4)); //false
     }
 }
