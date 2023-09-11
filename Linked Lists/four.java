@@ -13,6 +13,8 @@ public class four {
             temp=temp.next;
         }
     }
+
+    //Detect cycle in Linked List
     public static boolean isCycle(Node head){
         if(head==null || head.next==null) return false;
         Node slow=head;
@@ -30,6 +32,7 @@ public class four {
     }
 
 
+    //Starting point in Cyclic LL
     public Node startCycle(Node head) {
         if(head==null || head.next==null)
             return null;
