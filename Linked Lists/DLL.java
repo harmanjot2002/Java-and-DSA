@@ -164,6 +164,22 @@ public class DLL {
     }
     */
 
+    //Reverse a DLL
+    public static Node reverseDLL(Node head){
+        if(head==null && head.next==null)
+            return head;
+        Node prev=null;
+        Node curr=head;
+        while(curr!=null){
+            //Swapping
+            prev=curr.prev;
+            curr.prev=curr.next;
+            curr.next=prev;
+
+            curr=curr.prev;
+        }
+        return prev.prev;
+    }
     public static void main(String[] args) {
         Node a=new Node(4);
         Node b=new Node(10);
@@ -217,12 +233,15 @@ public class DLL {
         // System.out.println(isPalindrome(a));//true
 
 
+        // display(a);
+        // insertAtTail(a, 19);
+        // display(a); //4 10 2 99 13 19
+        // twoSum(a, 23); //4 19
+
+    
         display(a);
-        insertAtTail(a, 19);
-        display(a); //4 10 2 99 13 19
-        twoSum(a, 23); //4 19
-
-
+        Node temp=reverseDLL(a);
+        display(temp);
 
     }
 }
