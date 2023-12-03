@@ -30,7 +30,7 @@ public class CircularKadane {
         int arr_sum=0;
         for(int i=0;i<n;i++){
             arr_sum+=arr[i];
-            arr[i]=-arr[i];
+            arr[i]=-arr[i]; //negate
         }
         int max_circular=arr_sum+normalMaxSum(arr,n);
         System.out.println(Math.max(max_normal,max_circular));
