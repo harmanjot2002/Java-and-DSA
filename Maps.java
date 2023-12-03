@@ -51,7 +51,7 @@ public class Maps{
 
         //Maximum Frequency Element in Array
         int arr[]={1,3,2,1,4,1};
-        Map<Integer,Integer> freq=new HashMap<>();
+        HashMap<Integer,Integer> freq=new HashMap<>();
         for(int i:arr){
             if(!freq.containsKey(i)){
                 freq.put(i,1);

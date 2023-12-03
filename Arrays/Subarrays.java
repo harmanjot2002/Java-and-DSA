@@ -125,6 +125,91 @@ public class Subarrays {
         }
         return cnt;
     }
+
+
+   
+
+
+    //generate all subarrays
+    // public static void allSubarrays(int arr[],int n){
+    //     ArrayList<Integer> al=new ArrayList<>();
+    //     for(int i=0;i<n;i++){
+    //         al.add(arr[i]);
+    //     }
+    //     for(int i=0;i<n;i++){
+    //         for(int j=i;j<n;j++){
+    //             ArrayList<Integer> nal=new ArrayList<>();
+    //             for(int k=i;k<=j;k++){
+    //                 nal.add(al.get(k));
+    //             }
+    //             System.out.println(nal);
+    //         }
+    //     }
+    // }
+
+    //generate all subarrays with zero sum
+    // public static void allZeroSumSubarrays(int arr[],int n){
+    //     ArrayList<Integer> al=new ArrayList<>();
+    //     for(int i=0;i<n;i++){
+    //         al.add(arr[i]);
+    //     }
+    //     for(int i=0;i<n;i++){
+    //         for(int j=i;j<n;j++){
+    //             ArrayList<Integer> nal=new ArrayList<>();
+    //             for(int k=i;k<=j;k++){
+    //                 nal.add(al.get(k));
+    //             }
+    //             int sum=0;
+    //             for(int s=0;s<nal.size();s++){
+    //                 sum+=nal.get(s);
+    //             }
+    //             if(sum==0)
+    //                 System.out.println(nal);
+    //         }
+    //     }
+    // }
+
+
+     //Count good subarrays
+    // public static int goodSubarrays(int arr[],int n,int s){
+    //     ArrayList<Integer> al=new ArrayList<>();
+    //     for(int i=0;i<n;i++){
+    //         al.add(arr[i]);
+    //     }
+    //     int ans=0;
+    //     for(int i=s;i<=n;i++){
+    //         for(int j=0;j<=n-i;j++){
+    //             ArrayList<Integer> nal=new ArrayList<>();
+    //             for(int k=j;k<i+j;k++){
+    //                 nal.add(al.get(k));
+    //             }
+    //             HashSet<Integer> hs=new HashSet<>();
+    //             hs.addAll(nal);
+    //             if(hs.size()==s){
+    //                 ans++;
+    //             }
+    //         }
+    //     }
+    //     return ans;
+    // }
+
+
+    public static int countGoodPairs(int arr[]){
+        HashMap<Integer,Integer> hm=new HashMap<>();
+        int cnt=0;
+        for(int i=0;i<arr.length;i++){
+            if(hm.containsKey(arr[i])){
+                cnt+=hm.get(arr[i]);
+                hm.put(arr[i],hm.get(arr[i])+1);
+            }
+            else{
+                hm.put(arr[i],1);
+            }
+            
+        }
+        return cnt;
+    }
+
     public static void main(String[] args) {
         //Window sliding technique
         // int arr[]={1,8,30,-5,20,7};
@@ -170,7 +255,7 @@ public class Subarrays {
         // int arr[]={15,-2,2,-8,1,7,10};
         // System.out.println(maxZeroSumSubarray(arr));
 
-        //Longest consecutice sequence
+        //Longest consecutive sequence
         // int arr[]={100,4,200,1,3,2};
         // System.out.println(longestConsecutiveSeq(arr)); //4
 
@@ -182,8 +267,30 @@ public class Subarrays {
 
 
         //Count k-sum subarrays
-        int arr[]={1,2,3};
-        int k=3;
-        System.out.println(countKsumSubarray(arr,k)); //2
+        // int arr[]={1,2,3};
+        // int k=3;
+        // System.out.println(countKsumSubarray(arr,k)); //2
+
+
+        //Generate all subarrays
+        // int arr[]={3,4,-7,3,1,3,1,-4,-2,-2};
+        // int n=10;
+        // allSubarrays(arr,n);
+
+        //Generate all zero sum subarrays
+        // int arr[]={3,4,-7,3,1,3,1,-4,-2,-2};
+        // int n=10;
+        // allZeroSumSubarrays(arr,n);
+
+        //Count good subarrays
+        // int arr[]={1,2,1,2,3};
+        // int n=5;
+        // int s=2;
+        // System.out.println(goodSubarrays(arr,n,s));
+
+
+        //Count good pairs
+        int arr[]={1,2,3,1,1,3};
+        System.out.println(countGoodPairs(arr));
     }
 }
