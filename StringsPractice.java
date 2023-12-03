@@ -88,24 +88,24 @@ public class StringsPractice {
 
         //Reverse each word in string
         //I ma na rotacude
-        String str="I am an educator";
-        String ans="";
-        StringBuilder sb=new StringBuilder("");
-        for(int i=0;i<str.length();i++){
-            char ch=str.charAt(i);
-            if(ch!=' '){
-                sb.append(ch);
-            }
-            else{
-                sb.reverse();
-                ans+=sb;
-                ans+=" ";
-                sb.delete(0,sb.length());
-            }
-        }
-        sb.reverse();
-        ans+=sb;
-        System.out.println(ans);
+        // String str="I am an educator";
+        // String ans="";
+        // StringBuilder sb=new StringBuilder("");
+        // for(int i=0;i<str.length();i++){
+        //     char ch=str.charAt(i);
+        //     if(ch!=' '){
+        //         sb.append(ch);
+        //     }
+        //     else{
+        //         sb.reverse();
+        //         ans+=sb;
+        //         ans+=" ";
+        //         sb.delete(0,sb.length());
+        //     }
+        // }
+        // sb.reverse();
+        // ans+=sb;
+        // System.out.println(ans);
         
 
         //Compress string
@@ -130,5 +130,30 @@ public class StringsPractice {
             ans+=cnt;
         System.out.println(ans);
         */
+
+
+        //Reverse string with preserved space positions
+        String str="This is a long string with spaces in between all words";
+        char[] charArr=str.toCharArray();
+        int low=0;
+        int high=charArr.length-1;
+        while(low<high){
+            if(charArr[low]==' '){
+                low++;
+            }
+            else if(charArr[high]==' '){
+                high--;
+            }
+            else{
+                char temp=charArr[low];
+                charArr[low]=charArr[high];
+                charArr[high]=temp;
+                low++;
+                high--;
+            }
+        }
+        for(Character i:charArr){
+            System.out.print(i); //sdro wl l anee wtebni seca pshtiw gn irtsgno las isihT
+        }
     }
 }

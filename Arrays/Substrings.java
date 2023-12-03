@@ -21,9 +21,35 @@ public class Substrings {
         return mx;
     }
 
+
+    public static void allSubStrings(String str){
+        for(int i=0;i<str.length();i++){
+            for(int j=i+1;j<=str.length();j++){
+                System.out.println(str.substring(i, j));
+            }
+        }
+    }
+
     public static void main(String[] args) {
         //Length of Longest substring without repeating characters
-        String str="chitkarac";
-        System.out.println(longestUniqueSubstring(str)); //7
+        // String str="chitkarac";
+        // System.out.println(longestUniqueSubstring(str)); //7
+
+
+        //Print all substrings
+        String str="abbd";
+        allSubStrings(str);
+        /*
+        a
+        ab
+        abb
+        abbd
+        b
+        bb
+        bbd
+        b
+        bd
+        d
+         */
     }
 }
