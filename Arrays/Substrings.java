@@ -36,14 +36,45 @@ public class Substrings {
         int n=charr.length;
         for(int i=0;i<Math.pow(2,n);i++){
             ArrayList<Character> al=new ArrayList<>();
-            for(int j=0;j<n;i++){
-                if((i & (1<<j))!=0){
+            for(int j=0;j<n;j++){
+                if((i& 1<<j)!=0){
                     al.add(charr[j]);
                 }
             }
             System.out.println(al);
         }
     }
+
+    public static String longestCommonSubsequence(String text1, String text2) {
+        int n = text1.length();
+        int m = text2.length();
+        int[][] dp = new int[n + 1][m + 1];
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= m; j++) {
+                if (text1.charAt(i - 1) == text2.charAt(j - 1)) {
+                    dp[i][j] = 1 + dp[i - 1][j - 1];
+                } else {
+                    dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+                }
+            }
+        }
+        // Backtrack to find the actual LCS
+        int i = n, j = m;
+        StringBuilder result = new StringBuilder();
+        while (i > 0 && j > 0) {
+            if (text1.charAt(i - 1) == text2.charAt(j - 1)) {
+                result.insert(0, text1.charAt(i - 1));
+                i--;
+                j--;
+            } else if (dp[i - 1][j] > dp[i][j - 1]) {
+                i--;
+            } else {
+                j--;
+            }
+        }
+        return result.toString();
+    }
+    
     public static void main(String[] args) {
         //Length of Longest substring without repeating characters
         // String str="chitkarac";
@@ -68,18 +99,8 @@ public class Substrings {
 
 
          //generate subsequence
-        String str="abc";
-        char[] charr=str.toCharArray();
-        int n=charr.length;
-        for(int i=0;i<Math.pow(2,n);i++){
-            ArrayList<Character> al=new ArrayList<>();
-            for(int j=0;j<n;j++){
-                if((i & (1<<j))!=0){
-                    al.add(charr[j]);
-                }
-            }
-            System.out.println(al);
-        }
+        // String str="abc";
+        // allSubsequence(str);
         /*
         []
         [a]   
@@ -90,5 +111,10 @@ public class Substrings {
         [b, c]
         [a, b, c]
         */
+
+
+        //Longest common subsequnece
+        String ans=longestCommonSubsequence("babbab","abaaba");
+        System.out.println(ans);
     }
 }

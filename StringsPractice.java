@@ -10,6 +10,16 @@ public class StringsPractice {
         }
         return true;
     }
+
+    static void Search(String S, String P) {
+        int len1 = S.length();
+        for (int i=0 ; i<len1 ; i++) {
+            if ((S.substring(i,len1).startsWith(P))) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+       
     public static void main(String[] args) {
         //Print all substrings of given string
         /*
@@ -133,27 +143,33 @@ public class StringsPractice {
 
 
         //Reverse string with preserved space positions
-        String str="This is a long string with spaces in between all words";
-        char[] charArr=str.toCharArray();
-        int low=0;
-        int high=charArr.length-1;
-        while(low<high){
-            if(charArr[low]==' '){
-                low++;
-            }
-            else if(charArr[high]==' '){
-                high--;
-            }
-            else{
-                char temp=charArr[low];
-                charArr[low]=charArr[high];
-                charArr[high]=temp;
-                low++;
-                high--;
-            }
-        }
-        for(Character i:charArr){
-            System.out.print(i); //sdro wl l anee wtebni seca pshtiw gn irtsgno las isihT
-        }
+        // String str="This is a long string with spaces in between all words";
+        // char[] charArr=str.toCharArray();
+        // int low=0;
+        // int high=charArr.length-1;
+        // while(low<high){
+        //     if(charArr[low]==' '){
+        //         low++;
+        //     }
+        //     else if(charArr[high]==' '){
+        //         high--;
+        //     }
+        //     else{
+        //         char temp=charArr[low];
+        //         charArr[low]=charArr[high];
+        //         charArr[high]=temp;
+        //         low++;
+        //         high--;
+        //     }
+        // }
+        // for(Character i:charArr){
+        //     System.out.print(i); //sdro wl l anee wtebni seca pshtiw gn irtsgno las isihT
+        // }
+
+
+        String S = "ABBABBABBABB";
+        String P = "AB";
+        Search(S,P);
+
     }
 }

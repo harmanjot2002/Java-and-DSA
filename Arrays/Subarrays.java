@@ -131,21 +131,21 @@ public class Subarrays {
 
 
     //generate all subarrays
-    // public static void allSubarrays(int arr[],int n){
-    //     ArrayList<Integer> al=new ArrayList<>();
-    //     for(int i=0;i<n;i++){
-    //         al.add(arr[i]);
-    //     }
-    //     for(int i=0;i<n;i++){
-    //         for(int j=i;j<n;j++){
-    //             ArrayList<Integer> nal=new ArrayList<>();
-    //             for(int k=i;k<=j;k++){
-    //                 nal.add(al.get(k));
-    //             }
-    //             System.out.println(nal);
-    //         }
-    //     }
-    // }
+    public static void allSubarrays(int arr[],int n){
+        ArrayList<Integer> al=new ArrayList<>();
+        for(int i=0;i<n;i++){
+            al.add(arr[i]);
+        }
+        for(int i=0;i<n;i++){
+            for(int j=i;j<n;j++){
+                ArrayList<Integer> nal=new ArrayList<>();
+                for(int k=i;k<=j;k++){
+                    nal.add(al.get(k));
+                }
+                System.out.println(nal);
+            }
+        }
+    }
 
     //generate all subarrays with zero sum
     // public static void allZeroSumSubarrays(int arr[],int n){
@@ -171,27 +171,27 @@ public class Subarrays {
 
 
      //Count good subarrays
-    // public static int goodSubarrays(int arr[],int n,int s){
-    //     ArrayList<Integer> al=new ArrayList<>();
-    //     for(int i=0;i<n;i++){
-    //         al.add(arr[i]);
-    //     }
-    //     int ans=0;
-    //     for(int i=s;i<=n;i++){
-    //         for(int j=0;j<=n-i;j++){
-    //             ArrayList<Integer> nal=new ArrayList<>();
-    //             for(int k=j;k<i+j;k++){
-    //                 nal.add(al.get(k));
-    //             }
-    //             HashSet<Integer> hs=new HashSet<>();
-    //             hs.addAll(nal);
-    //             if(hs.size()==s){
-    //                 ans++;
-    //             }
-    //         }
-    //     }
-    //     return ans;
-    // }
+    public static int goodSubarrays(int arr[],int n,int s){
+        ArrayList<Integer> al=new ArrayList<>();
+        for(int i=0;i<n;i++){
+            al.add(arr[i]);
+        }
+        int ans=0;
+        for(int i=s;i<=n;i++){
+            for(int j=0;j<=n-i;j++){
+                ArrayList<Integer> nal=new ArrayList<>();
+                for(int k=j;k<i+j;k++){
+                    nal.add(al.get(k));
+                }
+                HashSet<Integer> hs=new HashSet<>();
+                hs.addAll(nal);
+                if(hs.size()==s){
+                    ans++;
+                }
+            }
+        }
+        return ans;
+    }
 
 
     public static int countGoodPairs(int arr[]){
@@ -283,14 +283,14 @@ public class Subarrays {
         // allZeroSumSubarrays(arr,n);
 
         //Count good subarrays
-        // int arr[]={1,2,1,2,3};
-        // int n=5;
-        // int s=2;
-        // System.out.println(goodSubarrays(arr,n,s));
+        int arr[]={1,2,1,2,3};
+        int n=5;
+        int s=2;
+        System.out.println(goodSubarrays(arr,n,s));
 
 
         //Count good pairs
-        int arr[]={1,2,3,1,1,3};
-        System.out.println(countGoodPairs(arr));
+        // int arr[]={1,2,3,1,1,3};
+        // System.out.println(countGoodPairs(arr));
     }
 }
